@@ -1,4 +1,4 @@
-# RobotJS
+# KeepTrack
 
 A small **React + TypeScript** app for browsing and editing projects. It uses **Redux** for state, **React Router** for navigation, and **json-server** as a local REST API so you can run everything offline.
 
