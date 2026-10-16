@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Generated build and Robot Framework reports
+dist/
+demo/report.html
+demo/log.html
+demo/output.xml

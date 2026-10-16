@@ -10,7 +10,7 @@ import userEvent from "@testing-library/user-event";
 describe("<ProjectForm />", () => {
   let project: Project;
   let updatedProject: Project;
-  let handleCancel: jest.Mock;
+  let handleCancel: ReturnType<typeof vi.fn<(...args: any[]) => void>>;
   let nameTextBox: any;
   let descriptionTextBox: HTMLElement;
   let budgetTextBox: HTMLElement;
@@ -47,7 +47,7 @@ describe("<ProjectForm />", () => {
       description:
         "Blamed for a terrorist attack on the Kremlin, Ethan Hunt (Tom Cruise) and the entire IMF agency...",
     });
-    handleCancel = jest.fn();
+    handleCancel = vi.fn();
   });
 
   test("should load project into form", () => {

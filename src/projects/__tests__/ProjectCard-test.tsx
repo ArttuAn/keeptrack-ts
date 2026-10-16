@@ -8,7 +8,7 @@ import renderer from "react-test-renderer";
 
 describe("<ProjectCard />", () => {
   let project: Project;
-  let handleEdit: jest.Mock;
+  let handleEdit: ReturnType<typeof vi.fn<(...args: any[]) => void>>;
 
   const setup = () =>
     render(
@@ -24,7 +24,7 @@ describe("<ProjectCard />", () => {
       description: "Testideskriptio",
       budget: 100,
     });
-    handleEdit = jest.fn();
+    handleEdit = vi.fn();
   });
 
   it("should initially render", () => {

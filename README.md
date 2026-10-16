@@ -127,3 +127,7 @@ Additional `.http` examples are under `api/test/`.
 ## License
 
 This repository does not include a license file in the tree; add one if you intend to distribute or reuse the code.
+
+## Current development toolchain
+
+Use Node.js 22.12 or newer and `npm ci`. The app now uses Vite (`npm start`), Vitest (`npm test`), and TypeScript (`npm run typecheck`); `npm run build` creates `dist/`. Run the course fixture API with `npm run api`; it and the dev/preview server bind only to loopback. The fixture API has no authentication and is intended for local development. Historical Create React App instructions above describe the original exercise. Generated Robot Framework reports are excluded from source control.
