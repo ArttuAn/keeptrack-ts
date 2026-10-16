@@ -8,7 +8,7 @@ describe("projectAPI", () => {
       statusText: "OK",
       headers: { "Content-Type": "application/json" },
     });
-    jest
+    vi
       .spyOn(window, "fetch")
       .mockImplementation(() => Promise.resolve(response));
     return projectAPI.get().then((data) => {

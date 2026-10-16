@@ -7,7 +7,7 @@ import ProjectDetail from "../ProjectDetail";
 
 describe("<ProjectDetail />", () => {
   let project: Project;
-  let handleEdit: jest.Mock;
+  let handleEdit: ReturnType<typeof vi.fn<(...args: any[]) => void>>;
   const setup = () =>
     render(
       <Provider store={store}>
@@ -24,7 +24,7 @@ describe("<ProjectDetail />", () => {
       description: "Testideskriptio",
       budget: 1000,
     });
-    handleEdit = jest.fn();
+    handleEdit = vi.fn();
   });
 
   //Yksikkötesti, harjoitustyö

@@ -9,8 +9,8 @@ import {
 } from '../projectTypes';
 import { projectAPI } from '../../projectAPI';
 import { MOCK_PROJECTS } from '../../MockProjects';
-// jest.mock('../../projectAPI');
-jest.mock('../../projectAPI');
+// vi.mock('../../projectAPI');
+vi.mock('../../projectAPI');
 
 const middlewares = [ReduxThunk];
 const mockStoreCreator = configureMockStore(middlewares);
@@ -38,7 +38,7 @@ describe('Project Actions', () => {
   });
 
   test('should return error', () => {
-    projectAPI.get = jest
+    projectAPI.get = vi
       .fn
       // leave this commented initially
       // projectAPI.get
